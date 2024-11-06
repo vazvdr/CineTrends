@@ -1,0 +1,138 @@
+/* Background preto com gradiente para o corpo da página */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #000, #1a1a1a); /* Gradiente preto a cinza escuro */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #e0e0e0; /* Cor de texto clara */
+}
+
+/* Container de filmes favoritos */
+.meus-filmes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header estilizado encostado no topo */
+.meus-filmes h1 {
+    margin: 0;
+    padding: 20px 0; /* Espaçamento interno para o cabeçalho */
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.85); /* Fundo preto semi-transparente */
+    color: #ffffff;
+    font-size: 2rem;
+}
+
+.meus-filmes span {
+    font-size: 18px;
+    color: #b0b0b0;
+}
+
+/* Grid responsivo de filmes */
+.meus-filmes ul {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 filmes por linha */
+    gap: 20px;
+    justify-content: center;
+    padding: 20px 0;
+    max-width: 1200px; /* Ajuste da largura máxima para caber 5 filmes */
+}
+
+/* Estilização dos itens da lista de filmes */
+.meus-filmes ul li {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    background-color: rgba(30, 30, 30, 0.85); /* Fundo preto semi-transparente */
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.6);
+    transition: transform 0.2s ease;
+}
+
+.meus-filmes ul li:hover {
+    transform: translateY(-20px);
+}
+
+.meus-filmes img {
+    width: 100%;
+    height: auto;
+    max-height: 180px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.meus-filmes div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.meus-filmes div a {
+    text-decoration: none;
+    color: #5dade2; /* Azul claro para contraste */
+    font-weight: bold;
+}
+
+.meus-filmes div button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+
+.meus-filmes div button:hover {
+    background-color: #c0392b;
+}
+
+/* Media Queries para Responsividade */
+
+/* Dispositivos grandes (laptops e desktops) */
+@media (max-width: 1200px) {
+    .meus-filmes ul {
+        grid-template-columns: repeat(4, 1fr); /* 4 filmes por linha */
+    }
+}
+
+/* Tablets (médias telas) */
+@media (max-width: 992px) {
+    .meus-filmes ul {
+        grid-template-columns: repeat(3, 1fr); /* 3 filmes por linha */
+    }
+}
+
+/* Tablets e smartphones maiores (telas pequenas) */
+@media (max-width: 768px) {
+    .meus-filmes ul {
+        grid-template-columns: repeat(2, 1fr); /* 2 filmes por linha */
+    }
+}
+
+/* Smartphones (telas muito pequenas) */
+@media (max-width: 576px) {
+    .meus-filmes ul {
+        grid-template-columns: repeat(2, 1fr); /* 1 filme por linha */
+    }
+
+    .meus-filmes h1 {
+        font-size: 1.5rem;
+    }
+
+    .meus-filmes img {
+        max-height: 150px; /* Reduz a altura da imagem em telas pequenas */
+    }
+}

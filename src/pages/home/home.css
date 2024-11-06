@@ -1,0 +1,88 @@
+/* Background preto com gradiente para o corpo da página */
+.container {
+    background: linear-gradient(135deg, #000, #1a1a1a); /* Gradiente preto a cinza escuro */
+}
+
+/* Estilo da lista de filmes */
+.lista-filmes {
+    display: flex;
+    font-family: arial, sans-serif;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+.lista-filmes article {
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo dos artigos dos filmes */
+    font-family: arial, sans-serif;
+    padding: 15px;
+    border-radius: 14px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.6);
+    transition: transform 0.2s ease;
+    width: 100%; /* Padrão para telas menores */
+}
+
+.lista-filmes article:hover{
+    transform: translateY(-10px);
+}
+
+.lista-filmes strong {
+    margin-bottom: 14px;
+    font-family: arial, sans-serif;
+    text-align: center;
+    font-size: 22px;
+    display: block;
+    color: #fff; /* Cor do título do filme */
+}
+
+.lista-filmes img {
+    width: 100%;
+    max-height: 340px;
+    object-fit: cover;
+    display: block;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.lista-filmes a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    font-size: 24px;
+    background-color: #116eeb; /* Cor do botão */
+    text-decoration: none;
+    color: #fff;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.lista-filmes a:hover{
+    background-color: black;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 14px;
+    width: 100%;
+}
+
+/* Media Query para telas maiores que 576px */
+@media (min-width: 576px) {
+    .lista-filmes article {
+        width: calc(50% - 20px); /* 2 itens por linha */
+    }
+}
+
+/* Media Query para telas maiores que 900px */
+@media (min-width: 900px) {
+    .lista-filmes article {
+        width: calc(33.333% - 20px); /* 3 itens por linha */
+    }
+}

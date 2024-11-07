@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import api from '../../services/api';
+import './search.css'
+import { Link } from 'react-router-dom';
 
 const Search = () => {
   const searchURL = "https://api.themoviedb.org/3/search/movie";
@@ -42,6 +44,7 @@ const Search = () => {
         Resultados para: <span className="query-text">{query}</span>
       </h2>
 
+
       <div className="movies-list">
         {filmes.length > 0 ? (
           filmes.map((filme) => (
@@ -52,6 +55,7 @@ const Search = () => {
               />
               <h2>{filme.title}</h2>
               <p>Nota: {filme.vote_average}</p>
+              <Link to={`/filme/${filme.id}`}>Acessar</Link>
             </div>
           ))
         ) : (

@@ -23,7 +23,7 @@
     backdrop-filter: blur(10px);
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.6);
     transition: transform 0.2s ease;
-    width: 100%; /* Padrão para telas menores */
+    width: 90%; /* Padrão para telas menores */
 }
 
 .lista-filmes article:hover{

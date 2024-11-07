@@ -1,0 +1,110 @@
+/* Background preto com gradiente para o corpo da página */
+.result-search {
+    background: linear-gradient(135deg, #000, #1a1a1a); /* Gradiente preto a cinza escuro */
+    padding: 20px;
+    min-height: 100vh;
+    color: #fff;
+}
+
+/* Título dos resultados */
+.title {
+    font-size: 28px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Estilo da lista de filmes */
+.movies-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.movies-list.single-movie .movie-card {
+    width: calc(25% - 20px); /* Força um tamanho padrão para 4 colunas em desktop */
+}
+
+/* Estilo dos cartões individuais de filmes */
+.movie-card {
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo dos cartões dos filmes */
+    font-family: Arial, sans-serif;
+    padding: 15px;
+    border-radius: 14px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.6);
+    transition: transform 0.2s ease;
+    width: 100%; /* Padrão para telas menores */
+    text-align: center;
+}
+
+.movie-card:hover {
+    transform: translateY(-10px);
+}
+
+.movie-card img {
+    width: 100%;
+    max-height: 340px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.movie-card h2 {
+    font-size: 20px;
+    color: #fff;
+    margin: 10px 0;
+}
+
+.movie-card p {
+    font-size: 18px;
+    color: #ccc;
+}
+
+.movies-list a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    font-size: 24px;
+    background-color: #116eeb; /* Cor do botão */
+    text-decoration: none;
+    color: #fff;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.movies-list a:hover {
+    background-color: black;
+}
+
+/* Estilo para mensagens de erro ou sem resultados */
+.movies-list p {
+    font-size: 20px;
+    color: #ccc;
+    text-align: center;
+}
+
+/* Media Query para telas menores que 576px (smartphones) */
+@media (max-width: 575.98px) {
+    .movie-card {
+        width: 100%; /* 1 item por linha */
+    }
+}
+
+/* Media Query para telas entre 576px e 900px (tablets) */
+@media (min-width: 576px) and (max-width: 899.98px) {
+    .movie-card {
+        width: calc(50% - 20px); /* 2 itens por linha */
+    }
+}
+
+/* Media Query para telas maiores que 900px (desktops) */
+@media (min-width: 900px) {
+    .movie-card {
+        width: calc(25% - 20px); /* 4 itens por linha */
+    }
+}

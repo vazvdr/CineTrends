@@ -91,7 +91,7 @@
 /* Media Query para telas menores que 576px (smartphones) */
 @media (max-width: 575.98px) {
     .movie-card {
-        width: 100%; /* 1 item por linha */
+        width: 90%; /* 1 item por linha */
     }
 }
 
@@ -105,6 +105,6 @@
 /* Media Query para telas maiores que 900px (desktops) */
 @media (min-width: 900px) {
     .movie-card {
-        width: calc(25% - 20px); /* 4 itens por linha */
+        width: calc(35% - 20px); /* 4 itens por linha */
     }
 }

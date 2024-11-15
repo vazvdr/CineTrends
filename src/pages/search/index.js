@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const Search = () => {
   const searchURL = "https://api.themoviedb.org/3/search/movie";
-  const api_key = "Digite sua chave aqui";
+  const api_key = "28fc232cc001c31e8a031f419d0a14ca";
   const [searchParams, setSearchParams] = useSearchParams();
 
   const [filmes, setFilmes] = useState([]);
